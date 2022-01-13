@@ -1,0 +1,38 @@
+<div style="margin-left: 10%; margin-right: 10%;">
+    <br>
+    <h2 style="text-align: center">Colaborador</h2>
+    <mat-divider></mat-divider>
+    <br>
+    <form id="add-form" [formGroup]="colaboradorForm" >
+                        
+        <mat-form-field appearance="fill" style="margin-right: 3%;">
+            <mat-label>Nome</mat-label>
+            <input matInput formControlName="nome" name="nome" placeholder="Digite o nome">
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill" style="margin-right: 3%;">
+            <mat-label>Sobrenome</mat-label>
+            <input matInput formControlName="sobrenome" name="sobrenome" placeholder="Digite o sobrenome">
+        </mat-form-field>
+        
+        
+        <mat-form-field appearance="fill" style="margin-right: 3%;">
+            <mat-label>Cargo</mat-label>
+            <input matInput formControlName="cargo" name="cargo"placeholder="Digite o cargo">
+        </mat-form-field>
+        
+        <mat-form-field appearance="fill">
+            <mat-label>Data de Nascimento</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="dataNascimento" name="dataNascimento" placeholder="Digite a data de nascimento">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+        <app-endereco [enderecoForm]="enderecoForm"></app-endereco>
+        
+        <div class="example-button-row">
+            <button type="submit" mat-raised-button color="primary" style="margin-right: 0.5%;"  (click)="postColaborador()">Salvar</button>
+            <button mat-raised-button color="warn" (click)="home()" >Voltar</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,17 @@
+table {
+    width: 100%;
+}
+
+thead {
+    text-align: center;
+}
+
+th, id {
+    width: 1%;
+}
+
+.mat-icon-button{
+    height:15px !important;
+    width:15px !important;
+    font-size:3px !important;
+}
